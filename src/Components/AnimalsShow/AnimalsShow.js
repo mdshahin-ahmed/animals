@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "./AnimalsShow.css";
 import bird from "../../images/bird.svg";
 import cat from "../../images/cat.svg";
 import cow from "../../images/cow.svg";
@@ -17,10 +18,16 @@ const animalObj = {
 };
 
 const AnimalsShow = ({ type }) => {
+  const [size, setSize] = useState(0);
   return (
-    <div>
-      <img src={animalObj[type]} alt="animal" />
-      <img src={heart} alt="heart" />
+    <div className="animalWrap" onClick={() => setSize(size + 1)}>
+      <img className="animal" src={animalObj[type]} alt="animal" />
+      <img
+        className="heart"
+        src={heart}
+        alt="heart"
+        style={{ width: 10 + 10 * size + "px" }}
+      />
     </div>
   );
 };

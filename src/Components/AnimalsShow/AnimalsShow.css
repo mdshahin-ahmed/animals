@@ -1,0 +1,15 @@
+.animalWrap {
+  position: relative;
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.animal {
+  height: 200px;
+}
+.heart {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
